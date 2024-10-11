@@ -25,6 +25,9 @@ else
 		dash='.'
 	fi
 	magisk_link="https://github.com/topjohnwu/Magisk/releases/download/${nver}/Magisk${dash}${nver}.apk"
+	if [ "$nver" = "v28.0" ]; then
+  		magisk_link="https://github.com/topjohnwu/Magisk/releases/download/v28.0/app-release.apk"
+  fi
 fi
 
 if [ \( -n "$nver" \) -a \( "$nver" != "$ver" \) -o ! \( -f "$DIR/magiskinit" \) -o \( "$nver" = "canary" \) -o \( "$nver" = "alpha" \) ]
