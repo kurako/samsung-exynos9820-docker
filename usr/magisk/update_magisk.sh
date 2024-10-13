@@ -6,10 +6,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 ver="$(cat "$DIR/magisk_version" 2>/dev/null || echo -n 'none')"
 
-#temporary enforce v27.0
-ver="v27.0"
-echo -n $ver > "$DIR/magisk_version"
-
 if [ "x$1" = "xcanary" ]
 then
 	nver="canary"
